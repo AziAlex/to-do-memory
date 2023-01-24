@@ -68,9 +68,33 @@ function App() {
           className='enter'
           onClick={newItem}
         >
-          Learn React
-        </a>
-      </header>
+          Enter
+        </button>
+      </div>
+
+      {
+        items.map((item, index) => {
+          return (
+            <Draggable
+              key={index}
+              defaultPosition={item.defaultPos}
+              onStop={(_, data) => {
+                updatePus(data, index)
+              }}
+            >
+              <div className='todo-item' style={{ backgroundColor: item.color }}>
+                {`${item.item}`}
+                <button
+                  className='delete'
+                  onClick={() => deleteNow(item.id)}
+                >
+                  +
+                </button>
+              </div>
+            </Draggable>
+          )
+        })
+      }
     </div>
   );
 }
