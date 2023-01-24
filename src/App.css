@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
-}
+.App {}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.wraper {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: rgb(71, 71, 71);
+  color: #fff;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  background: transparent;
+  width: 250px;
+  color: #fff;
+  padding: 0 0 5px 5px;
+  outline: none;
+  border: 0;
+  font-size: 1.2em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.404);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.enter {
+  background-color: rgba(255, 255, 255, 0.404);
+  font-size: 1.2em;
+  outline: none;
+  border: 0;
+  padding: 3.5px 15px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.enter:hover {
+  background-color: #fff;
+}
+
+.todo-item {
+  cursor: move;
+  position: absolute;
+  min-width: 215px;
+  color: black;
+  padding: 1em;
+  border-radius: 5px ;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 0;
+  font-size: 1.5em;
+  transform: rotate(-45deg);
+  border-radius: 50%;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #fff;
+
 }
